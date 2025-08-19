@@ -50,8 +50,12 @@ def main():
             #Find selected choice
             selected = next(c for c in current_scenario['choices'] if c['text'] == choice )
 
-            #show feedback
-            st.write(selected['feedback']) #check this later
+            #show  and correct answer feedback
+            if selected['is_correct']:
+                st.markdown("**Correct!**")
+            else:
+                st.markdown("**Wrong**")
+            st.write(f"**Feedback**: {selected['feedback']}")
 
             #Update to next scenario
             if selected['next_id']:
