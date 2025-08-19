@@ -1,0 +1,64 @@
+{
+    "scenarios": [
+        {
+            "id": "1",
+            "description": "A user reports receiving an email with a suspicious link claiming to be from IT. What do you do?",
+            "choices": [
+                {
+                    "text": "Quarantine the email and report to security team",
+                    "is_correct": true,
+                    "feedback": "Correct! Quarantining prevents phishing attacks and escalates appropriately.",
+                    "next_id": "2"
+                },
+                {
+                    "text": "Click the link to verify it",
+                    "is_correct": false,
+                    "feedback": "Wrong. Clicking unknown links can execute malware. Quarantine instead.",
+                    "next_id": "3"
+                },
+                {
+                    "text": "Ignore the email and do nothing",
+                    "is_correct": false,
+                    "feedback": "Not ideal. Ignoring risks other users falling for it. Report it.",
+                    "next_id": "3"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "description": "The security team confirms it’s a phishing attempt. They ask you to advise the user. What’s next?",
+            "choices": [
+                {
+                    "text": "Educate user on spotting phishing emails",
+                    "is_correct": true,
+                    "feedback": "Great! User education is key to preventing future incidents.",
+                    "next_id": null
+                },
+                {
+                    "text": "Tell user to change their password immediately",
+                    "is_correct": false,
+                    "feedback": "Not necessary yet—focus on education unless credentials were compromised.",
+                    "next_id": null
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "description": "The email wasn’t quarantined, and another user clicked the link, downloading malware. What now?",
+            "choices": [
+                {
+                    "text": "Isolate the affected device and notify security",
+                    "is_correct": true,
+                    "feedback": "Correct! Isolating limits damage, and notifying escalates properly.",
+                    "next_id": null
+                },
+                {
+                    "text": "Reboot the device to fix it",
+                    "is_correct": false,
+                    "feedback": "Wrong. Rebooting may not remove malware and could spread it. Isolate first.",
+                    "next_id": null
+                }
+            ]
+        }
+    ]
+}
