@@ -59,6 +59,48 @@
                     "next_id": null
                 }
             ]
+        },
+        {
+            "id": "4",
+            "description": "A user calls saying their account is locked after entering their password incorrectly multiple times. What’s your first step?",
+            "choices": [
+                {
+                    "text": "Verify the user’s identity before unlocking",
+                    "is_correct": true,
+                    "feedback": "Correct! Identity verification prevents unauthorized access.",
+                    "next_id": "5"
+                },
+                {
+                    "text": "Unlock the account immediately",
+                    "is_correct": false,
+                    "feedback": "Wrong. Unlocking without verification risks security breaches.",
+                    "next_id": null
+                },
+                {
+                    "text": "Ask the user to email their password for verification",
+                    "is_correct": false,
+                    "feedback": "Never ask for passwords via email—it’s insecure and risks phishing.",
+                    "next_id": null
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "description": "After verifying the user, you unlock their account. What should you advise them to do next?",
+            "choices": [
+                {
+                    "text": "Set a stronger password and enable two-factor authentication",
+                    "is_correct": true,
+                    "feedback": "Excellent! Strong passwords and 2FA enhance account security.",
+                    "next_id": null
+                },
+                {
+                    "text": "Use the same password for simplicity",
+                    "is_correct": false,
+                    "feedback": "Wrong. Reusing weak passwords increases vulnerability.",
+                    "next_id": null
+                }
+            ]
         }
     ]
 }
